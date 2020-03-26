@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+	<title>Erstudio</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+	<script type="text/javascript" src="js/jquery.bxslider.min.js" ></script>
+	<script>
+		$(document).ready(function(){	
+			$('.slide-box').bxSlider({
+				  mode: 'horizontal',
+				  controls: false,
+				  auto: true
+			});
+			$('.form-elem.select').click(function(){
+				$('.secondary-param').slideToggle('slow');
+			});
+			
+		});
+		//var show;
+		//function .order-form .secondary-param(type){
+		//param=document.getElementById(type);
+			//if(param.style.display == "none") {
+			//if(show) show.style.display = "none";
+			//param.style.display = "block";
+			//show = param;
+		//}else param.style.display = "none"
+		//}
+	</script>
+</head>
+<body>
+	<div id="header">
+		<div id="header-inner">
+			<h1 id="logo"> ERSTUDIO </h1>
+			<div id="languages">
+				<a href="#" class="ru">RU</a>
+				<a href="#">EN</a>
+			</div>
+			<nav class="main-menu">
+				<ul id="menu-main" class="menu">
+					<li id="menu-item-1" class="menu-item-1">
+						<a href="#"><span>Фотосьемка</span></a>
+					</li>
+					<li id="menu-item-2" class="menu-item-2">
+						<a href="#"><span>Видео</span></a>
+						<ul class="sub-menu">
+							<li id="menu-item-6">
+								<a href="#">Свадебное фото</a>
+							</li>
+							<li id="menu-item-7">
+								<a href="#">Детские фотографии</a>
+							</li>
+							<li id="menu-item-8">
+								<a href="#">Рекламная фотосьемка</a>
+							</li>
+							<li id="menu-item-9">
+								<a href="#">Выпускные альбомы</a>
+							</li>
+							<li id="menu-item-10">
+								<a href="#">Фотосессии</a>
+							</li>
+						</ul>
+					</li>
+					<li id="menu-item-3" class="menu-item-3">
+						<a href="#"><span>Свадебное фото</span></a>
+					</li>
+					<li id="menu-item-4" class="menu-item-4">
+						<a href="#"><span>Блог</span></a>
+					</li>
+					<li id="menu-item-5" class="menu-item-5">
+						<a href="#"><span>Контакты</span></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<section class="content">
+		<div class="slide-box">
+			<div class="slide">
+				<img src="images/banner.png" alt="Фото">
+			</div>
+			<div class="slide">
+				<img src="images/banner-2.jpg" alt="Фото">
+			</div>
+		</div>
+		<div class="shadow"></div>
+		<nav class="slider-menu">
+			<ul>
+				<li>
+					<div>
+						<a href="#" title="Детские фотографии">
+							<i>
+								<img src="images/nav-menu-1.png" alt="9">
+							</i>
+							<p> Детские фотографии </p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#" title="Рекламная фотосъемка">
+							<i>
+								<img src="images/nav-menu-2.png" alt="10">
+							</i>
+							<p> Рекламная фотосъемка </p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#" title="Выпускные альбомы">
+							<i>
+								<img src="images/nav-menu-3.png" alt="11">
+							</i>
+							<p> Выпускные альбомы </p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#" title="Фотосессии">
+							<i>
+								<img src="images/nav-menu-4.png" alt="12">
+							</i>
+							<p> Фотосессии </p>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<h2 class="block-title">Я хочу заказать со скидкой 10%...</h2>
+		<form action="erstudio.php"id="orderForm" method="post">
+			<div class="order-form">
+				<div class="main-param">
+					<label class="first">Выберите услуги</label>
+					<label>Ваше имя:</label>
+					<label class="last">Ваш номер телефона:</label>
+					<div class="form-elem select first">
+						<span>Выберите услугу любую</span>
+					</div>
+					<input type="text" name="your-name" class="form-elem">
+					<input type="text" name="tel" class="form-elem last">
+				</div>
+				<div class="secondary-param">
+					<h3> Фото:</h3>
+					<ul>
+						<li>
+							<label for="wedding-photos">
+								<i>
+									<img src="images/photo-1.png" alt="21">
+								</i>
+								<span>Cвадебная фотография</span>
+							</label>
+							<input type="radio" id="wedding-photos" name="photos" value="Cвадебная фотография">
+						</li>
+						<li>
+							<label for="Child-photos">
+								<i>
+									<img src="images/photo-2.png" alt="22">
+								</i>
+								<span>Детское семейное фото</span>
+							</label>
+							<input type="radio" id="Child-photos" name="photos" value="Детское семейное фото">
+						</li>
+						<li>
+							<label for="Photo-ber">
+								<i>
+									<img src="images/photo-3.png" alt="23">
+								</i>
+								<span>Рекламное фото</span>
+							</label>
+							<input type="radio" id="Photo-ber" name="photos" value="Рекламное фото">
+						</li>
+						<li>
+							<label for="Sims-photo">
+								<i>
+									<img src="images/photo-4.png" alt="24">
+								</i>
+								<span>Фотосессии</span>
+							</label>
+							<input type="radio" id="Sims-photo" name="photos" value="Фотосессии">
+						</li>
+						<li>
+							<label for="photo-holiday">
+								<i>
+									<img src="images/photo-5.png" alt="25">
+								</i>
+								<span>Выпускные альбомы</span>
+							</label>
+							<input type="radio" id="photo-holiday" name="photos" value="Выпускные альбомы">
+						</li>
+						<li>
+							<label for="Photo-corpo">
+								<i>
+									<img src="images/photo-6.png" alt="26">
+								</i>
+								<span>Путешествия</span>
+							</label>
+							<input type="radio" id="Photo-corpo" name="photos" value="Путешествия">
+						</li>
+						<li>
+							<label for="photosessions">
+								<i>
+									<img src="images/photo-7.png" alt="27">
+								</i>
+								<span>Ретушь</span>
+							</label>
+							<input type="radio" id="photosessions" name="photos" value="Ретушь">
+						</li>			
+					</ul>
+					<h3>Видео:</h3>
+					<ul>
+						<li>
+							<label for="wedding-video">
+								<i>
+									<img src="images/video-1.png" alt="41">
+								</i>
+								<span>Свадебное видео</span>
+							</label>
+							<input type="radio" id="wedding-video" name="video" value="Свадебное видео">
+						</li>
+						<li>
+							<label for="video-holiday">
+								<i>
+									<img src="images/video-2.png" alt="42">
+								</i>
+								<span>Видеосъемка дня рождения</span>
+							</label>
+							<input type="radio" id="video-holiday" name="video" value="Видеосъемка дня рождения">
+						</li>
+						<li>
+							<label for="video-corpo">
+								<i>
+									<img src="images/video-3.png" alt="43">
+								</i>
+								<span>Рекламные ролики</span>
+							</label>
+							<input type="radio" id="video-corpo" name="video" value="Рекламные ролики">
+						</li>
+					</ul>
+					<h3>Свадебное авто:</h3>
+					<ul>
+						<li>
+							<label for="wedding-auto">
+								<i>
+									<img src="images/video-1.png" alt="51">
+								</i>
+								<span>Свадебные автомобили</span>
+							</label>
+							<input type="radio" id="wedding-auto" name="auto" value="Свадебные автомобили">
+						</li>
+						<li>
+							<label for="patterns-on-auto">
+								<i>
+									<img src="images/video-2.png" alt="52">
+								</i>
+								<span>Украшения на авто</span>
+							</label>
+							<input type="radio" id="patterns-on-auto" name="auto" value="Украшения на авто">
+						</li>
+					</ul>
+				</div>
+			</div>
+		</form>
+		<div class="order-form-shadow"></div>
+		<a href="#" class="submit-btn" onclick="ga('send',.submit();">Заказать</a>
+		<!-- end order -->
+		<h2 class="block-title">Наша команда</h2>
+		<div class="our-team">
+			<img src="images/our-team.png" alt="Наша команда">
+			<p>Наша команда – это только лучшие люди в отрасли свадебной индустрии: Свадебный организатор, стилист, визажист, парикхмахер, генератор идей,постановщик,  фотограф, дизайнер, режисер, видеоограф а также ведущий, флорист и оформитель.</br>
+			Мы уверенны в том, что только в таком составе можно получить услуги Premium </p>
+		</div>
+	</section>
+	<footer>
+		<p class="copyright">© 2005 — 2013 Erstudio</p>
+		<div class="contacts">
+			<p class="address">Украина, г. Днепропетровск, ул. Артельная 10,(3 этаж) </p>
+			<p class="tel">тел.: (056) 371-72-64</p> 
+			<p class="tel-mob">тел.моб.: 063 25-25-680</p>
+			<p class="email">e-mail: <a href="mailto:erstudio@ua.fm">erstudio@ua.fm</a></p>
+		</div>
+		<a href="#" target="_blank" class="fary-tale">Fary Tale</a>
+	</footer>
+	<div id="su-footer-links" style="text-align: center;"></div>
+</body>
+</html>
